@@ -16,6 +16,7 @@ When you enter a name in the input field managed by the Form component, this nam
 After typing out a GitHub username when Search is pressed, the input form is cleared by clearing the userName state of the Form component, 
 and user details is displayed in card format. 
 Since there is a reusable card component we can create as many cards in one go.
+(If the username doesn't exists, it throws an alert and asks user to try again)
 
 We start by creating the Card component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using:
 
