@@ -8,8 +8,7 @@ Visit here:- https://9o033.csb.app/
 It uses, in addition to React, the Axios library. It’s a library to handle network requests.
 
 Explanation:-
-
-Creating a new create react app and applying the initial UI. 
+ 
 A form that accepts a GitHub username and once it receives a submit event, it asks the GitHub API for the user information and prints them.
 This code creates a reusable Card component. 
 When you enter a name in the input field managed by the Form component, this name is bound to its state.
@@ -18,7 +17,7 @@ and user details is displayed in card format.
 Since there is a reusable card component we can create as many cards in one go.
 (If the username doesn't exists, it throws an alert and asks user to try again)
 
-We start by creating the Card component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using:
+We start by Creating a new *Create React App* and applying the initial UI. Now, creating the Card component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using:
 
 - props.avatar_url the user avatar (Shows the regular github avatar, if no picture of user)
 - props.public_repos the number of public repositories
