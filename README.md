@@ -7,7 +7,7 @@ Visit here:- https://9o033.csb.app/
 
 It uses, in addition to React, the Axios library. It’s a library to handle network requests.
 
-Explanation:-
+## Explanation:-
  
 A form that accepts a GitHub username and once it receives a submit event, it asks the GitHub API for the user information and prints them.
 This code creates a reusable Card component. 
@@ -19,6 +19,7 @@ Since there is a reusable card component we can create as many cards in one go.
 
 We start by Creating a new *Create React App* and applying the initial UI. Now, creating the Card component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using:
 
+```bash
 - props.avatar_url the user avatar (Shows the regular github avatar, if no picture of user)
 - props.public_repos the number of public repositories
 - props.followers the number of followers
@@ -27,6 +28,7 @@ We start by Creating a new *Create React App* and applying the initial UI. Now, 
 - props.blog the user website URL (Shows N/A if user hasn't given their website on Github)
 - props.html_url the user GitHub ID URL
 - props.location the user location (Shows nothing if empty)
+```
 
 The parent component is App, which stores the cards array in its own state, managed using the useState() Hook.
 Inside App component, We create a list of those components, which will be passed by a parent component in the cards prop to CardList, 
