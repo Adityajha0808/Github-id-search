@@ -1,13 +1,15 @@
 # Github-id-search
 A Github ID Search Webapp built using React, showing user stats.
 
+
+The website is currently not live and is hosted locally on Code Sandbox.
 Visit here:- https://9o033.csb.app/
 
 (Approx. 7 hrs. solo project)
 
 It uses, in addition to React, the Axios library. It’s a library to handle network requests.
 
-## Explanation:-
+## Explanation
  
 A form that accepts a GitHub username and once it receives a submit event, it asks the GitHub API for the user information and prints them.
 This code creates a reusable Card component. 
@@ -35,7 +37,7 @@ Inside App component, We create a list of those components, which will be passed
 which iterates on it using map() and outputs a list of cards.
 
 Now to ask GitHub for the details of a single username, we’ll use a Form component, where we manage our own state (username), 
-and we ask GitHub for information about a user using their public APIs ("https://api.github.com/users/${userName}"), via Axios.
+and we ask GitHub for information about a user using their public APIs ```https://api.github.com/users/${userName}```, via Axios.
 
 When the form is submitted we call the handleSubmit event, and after the network call we call props.onSubmit passing the parent (App) the data we got from GitHub.
 
