@@ -22,16 +22,29 @@ Since there is a reusable card component we can create as many cards in one go.
 
 We start by Creating a new *Create React App* and applying the initial UI. Now, creating the Card component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using:
 
-```bash
-- props.avatar_url the user avatar (Shows the regular github avatar, if no picture of user)
-- props.public_repos the number of public repositories
-- props.followers the number of followers
-- props.following the number of followings
-- props.name the user name
-- props.blog the user website URL (Shows N/A if user hasn't given their website on Github)
-- props.html_url the user GitHub ID URL
-- props.location the user location (Shows nothing if empty)
-```
+```props.avatar_url``` 
+ the user avatar (Shows the regular github avatar, if no picture of user)
+ 
+```props.public_repos``` 
+ the number of public repositories
+ 
+```props.followers``` 
+the number of followers
+
+```props.following``` 
+the number of followings
+
+```props.name``` 
+the user name
+
+```props.blog``` 
+the user website URL (Shows N/A if user hasn't given their website on Github)
+
+```props.html_url``` 
+the user GitHub ID URL
+
+```props.location``` 
+the user location (Shows nothing if empty)
 
 The parent component is App, which stores the cards array in its own state, managed using the useState() Hook.
 Inside App component, We create a list of those components, which will be passed by a parent component in the cards prop to CardList, 
@@ -40,8 +53,8 @@ which iterates on it using map() and outputs a list of cards.
 Now to ask GitHub for the details of a single username, we’ll use a Form component, where we manage our own state (username), 
 and we ask GitHub for information about a user using their public APIs ```https://api.github.com/users/${userName}```, via Axios.
 
-When the form is submitted we call the handleSubmit event, and after the network call we call props.onSubmit passing the parent (App) the data we got from GitHub.
+When the form is submitted we call the *handleSubmit* event, and after the network call we call _props.onSubmit_ passing the parent (App) the data we got from GitHub.
 
-We add it to App, passing a method to add a new card to the list of cards, addNewCard, as its onSubmit prop.
+We add it to App, passing a method to add a new card to the list of cards, _addNewCard_, as its onSubmit prop.
 
-Finally we render our app, back to Index JS file.
+Finally we render our app, back to *Index JS* file.
